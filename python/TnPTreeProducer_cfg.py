@@ -76,7 +76,7 @@ options['SUPERCLUSTER_COLL']    = "reducedEgamma:reducedSuperClusters" ### not u
 options['ELECTRON_CUTS']        = "ecalEnergy*sin(superClusterPosition.theta)>5.0 &&  (abs(-log(tan(superClusterPosition.theta/2)))<2.5)"
 options['SUPERCLUSTER_CUTS']    = "abs(eta)<2.5 &&  et>5.0"
 options['PHOTON_CUTS']          = "(abs(-log(tan(superCluster.position.theta/2)))<=2.5) && pt> 10"
-options['ELECTRON_TAG_CUTS']    = "(abs(-log(tan(superCluster.position.theta/2)))<=2.1) && !(1.4442<=abs(-log(tan(superClusterPosition.theta/2)))<=1.566) && pt >= 30.0"
+options['ELECTRON_TAG_CUTS']    = "(abs(-log(tan(superCluster.position.theta/2)))<=2.1) && !(1.4442<=abs(-log(tan(superClusterPosition.theta/2)))<=1.566) && pt >= 35.0"
 
 options['MAXEVENTS']            = cms.untracked.int32(varOptions.maxEvents)
 options['DoTrigger']            = varOptions.doTrigger
@@ -117,21 +117,31 @@ if '2016' in options['era']:
   options['TnPPATHS']           = cms.vstring("HLT_Ele27_eta2p1_WPTight_Gsf_v*")
   options['TnPHLTTagFilters']   = cms.vstring("hltEle27erWPTightGsfTrackIsoFilter")
   options['TnPHLTProbeFilters'] = cms.vstring()
-  options['HLTFILTERSTOMEASURE']= {"passEleTriggers2016" : cms.vstring("hltEle27WPTightGsfTrackIsoFilter","hltEG175HEFilter","hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter")
+  options['HLTFILTERSTOMEASURE']= {"passHltEle27WPTightGsf" : cms.vstring("hltEle27WPTightGsfTrackIsoFilter"), 
+                                   "passHltPhoton175" : cms.vstring("hltEG175HEFilter"),
+                                   "passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
+                                   #"passMETTriggers2016" : cms.vstring("hltHBHENoiseFilter"),
+                                   #"passMETTriggers2016v2" : cms.vstring("HBHENoiseFilter"),
+                                   #"passMETTriggers2016" : cms.vstring("hltHBHENoiseFilter","hltHBHENoiseIsoFilter","hltglobalSuperTightHalo2016Filter","hltgoodVertices","hltEcalDeadCellTriggerPrimitiveFilter","hltBadPFMuonFilter"), 
                                   } 
 
 elif '2017' in options['era']:
   options['TnPPATHS']           = cms.vstring("HLT_Ele32_WPTight_Gsf_L1DoubleEG_v*")
   options['TnPHLTTagFilters']   = cms.vstring("hltEle32L1DoubleEGWPTightGsfTrackIsoFilter","hltEGL1SingleEGOrFilter")
   options['TnPHLTProbeFilters'] = cms.vstring()
-  options['HLTFILTERSTOMEASURE']= {"passEleTriggers2017" : cms.vstring("hltEle32WPTightGsfTrackIsoFilter","hltEle35WPTightGsfTrackIsoFilter","hltEG200HEFilter","hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter")
+  options['HLTFILTERSTOMEASURE']= {"passHltEl327WPTightGsfL1DoubleEG" : cms.vstring("hltEle32L1DoubleEGWPTightGsfTrackIsoFilter"),
+                                   "passHltEGL1SingleEG" : cms.vstring("hltEGL1SingleEGOrFilter"),
+                                   "passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
+                                   "passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
                                   }
 
 elif '2018'  in options['era']:
   options['TnPPATHS']           = cms.vstring("HLT_Ele32_WPTight_Gsf_v*")
   options['TnPHLTTagFilters']   = cms.vstring("hltEle32WPTightGsfTrackIsoFilter")
   options['TnPHLTProbeFilters'] = cms.vstring()
-  options['HLTFILTERSTOMEASURE']= {"passEleTriggers2018" : cms.vstring("hltEle32WPTightGsfTrackIsoFilter","hltEle35WPTightGsfTrackIsoFilter","hltEG200HEFilter","hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter")
+  options['HLTFILTERSTOMEASURE']= {"passHltEle32WPTightGsf" : cms.vstring("hltEle32WPTightGsfTrackIsoFilter"), 
+                                   "passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
+                                   "passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
                                   }
 
 # Apply L1 matching (using L1Threshold) when flag contains "L1match" in name
