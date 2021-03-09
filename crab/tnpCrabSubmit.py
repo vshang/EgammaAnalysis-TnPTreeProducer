@@ -4,7 +4,7 @@ import os
 #
 # Example script to submit TnPTreeProducer to crab
 #
-submitVersion = "TnP_EleTriggers_2020-12-23" # add some date here
+submitVersion = "TnP_METTriggers_2021-01-25" # add some date here
 doL1matching  = False
 
 defaultArgs   = ['doEleID=False','doPhoID=False','doTrigger=True']

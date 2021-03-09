@@ -117,31 +117,53 @@ if '2016' in options['era']:
   options['TnPPATHS']           = cms.vstring("HLT_Ele27_eta2p1_WPTight_Gsf_v*")
   options['TnPHLTTagFilters']   = cms.vstring("hltEle27erWPTightGsfTrackIsoFilter")
   options['TnPHLTProbeFilters'] = cms.vstring()
-  options['HLTFILTERSTOMEASURE']= {"passHltEle27WPTightGsf" : cms.vstring("hltEle27WPTightGsfTrackIsoFilter"), 
-                                   "passHltPhoton175" : cms.vstring("hltEG175HEFilter"),
-                                   "passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
-                                   #"passMETTriggers2016" : cms.vstring("hltHBHENoiseFilter"),
-                                   #"passMETTriggers2016v2" : cms.vstring("HBHENoiseFilter"),
-                                   #"passMETTriggers2016" : cms.vstring("hltHBHENoiseFilter","hltHBHENoiseIsoFilter","hltglobalSuperTightHalo2016Filter","hltgoodVertices","hltEcalDeadCellTriggerPrimitiveFilter","hltBadPFMuonFilter"), 
+  options['HLTFILTERSTOMEASURE']= {#"passHltEle27WPTightGsf" : cms.vstring("hltEle27WPTightGsfTrackIsoFilter"), 
+                                   #"passHltPhoton175" : cms.vstring("hltEG175HEFilter"),
+                                   #"passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
+                                   "passHBHENoiseFilter" : cms.vstring("Flag_HBHENoiseFilter"),
+                                   "passHBHENoiseFilterv2" : cms.vstring("HBHENoiseFilter"),
+                                   "passHBHENoiseFilterv3" : cms.vstring("hltHBHENoiseFilter"),
+                                   # "passHBHENoiseIsoFilter" : cms.vstring("Flag_HBHENoiseIsoFilter"),
+                                   # "passglobalSuperTightHalo2016Filter" : cms.vstring("Flag_globalSuperTightHalo2016Filter"),
+                                   # "passgoodVertices" : cms.vstring("Flag_goodVertices"),
+                                   # "passEcalDeadCellTriggerPrimitiveFilter" : cms.vstring("Flag_EcalDeadCellTriggerPrimitiveFilter"),
+                                   # "passBadPFMuonFilter" : cms.vstring("Flag_BadPFMuonFilter"),
+                                   # "passeeBadScFilter" : cms.vstring("Flag_eeBadScFilter"),
                                   } 
 
 elif '2017' in options['era']:
   options['TnPPATHS']           = cms.vstring("HLT_Ele32_WPTight_Gsf_L1DoubleEG_v*")
   options['TnPHLTTagFilters']   = cms.vstring("hltEle32L1DoubleEGWPTightGsfTrackIsoFilter","hltEGL1SingleEGOrFilter")
   options['TnPHLTProbeFilters'] = cms.vstring()
-  options['HLTFILTERSTOMEASURE']= {"passHltEl327WPTightGsfL1DoubleEG" : cms.vstring("hltEle32L1DoubleEGWPTightGsfTrackIsoFilter"),
-                                   "passHltEGL1SingleEG" : cms.vstring("hltEGL1SingleEGOrFilter"),
-                                   "passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
-                                   "passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
+  options['HLTFILTERSTOMEASURE']= {#"passHltEl327WPTightGsfL1DoubleEG" : cms.vstring("hltEle32L1DoubleEGWPTightGsfTrackIsoFilter"),
+                                   #"passHltEGL1SingleEG" : cms.vstring("hltEGL1SingleEGOrFilter"),
+                                   #"passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
+                                   #"passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
+                                   "passHBHENoiseFilter" : cms.vstring("Flag_HBHENoiseFilter"),
+                                   "passHBHENoiseIsoFilter" : cms.vstring("Flag_HBHENoiseIsoFilter"),
+                                   "passglobalSuperTightHalo2016Filter" : cms.vstring("Flag_globalSuperTightHalo2016Filter"),
+                                   "passgoodVertices" : cms.vstring("Flag_goodVertices"),
+                                   "passEcalDeadCellTriggerPrimitiveFilter" : cms.vstring("Flag_EcalDeadCellTriggerPrimitiveFilter"),
+                                   "passBadPFMuonFilter" : cms.vstring("Flag_BadPFMuonFilter"),
+                                   "passecalBadCalibFilterV2" : cms.vstring("Flag_ecalBadCalibFilterV2"),
+                                   "passeeBadScFilter" : cms.vstring("Flag_eeBadScFilter"),
                                   }
 
 elif '2018'  in options['era']:
   options['TnPPATHS']           = cms.vstring("HLT_Ele32_WPTight_Gsf_v*")
   options['TnPHLTTagFilters']   = cms.vstring("hltEle32WPTightGsfTrackIsoFilter")
   options['TnPHLTProbeFilters'] = cms.vstring()
-  options['HLTFILTERSTOMEASURE']= {"passHltEle32WPTightGsf" : cms.vstring("hltEle32WPTightGsfTrackIsoFilter"), 
-                                   "passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
-                                   "passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
+  options['HLTFILTERSTOMEASURE']= {#"passHltEle32WPTightGsf" : cms.vstring("hltEle32WPTightGsfTrackIsoFilter"), 
+                                   #"passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
+                                   #"passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
+                                   "passHBHENoiseFilter" : cms.vstring("Flag_HBHENoiseFilter"),
+                                   "passHBHENoiseIsoFilter" : cms.vstring("Flag_HBHENoiseIsoFilter"),
+                                   "passglobalSuperTightHalo2016Filter" : cms.vstring("Flag_globalSuperTightHalo2016Filter"),
+                                   "passgoodVertices" : cms.vstring("Flag_goodVertices"),
+                                   "passEcalDeadCellTriggerPrimitiveFilter" : cms.vstring("Flag_EcalDeadCellTriggerPrimitiveFilter"),
+                                   "passBadPFMuonFilter" : cms.vstring("Flag_BadPFMuonFilter"),
+                                   "passecalBadCalibFilterV2" : cms.vstring("Flag_ecalBadCalibFilterV2"),
+                                   "passeeBadScFilter" : cms.vstring("Flag_eeBadScFilter"),
                                   }
 
 # Apply L1 matching (using L1Threshold) when flag contains "L1match" in name
