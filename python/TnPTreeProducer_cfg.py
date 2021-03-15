@@ -120,15 +120,10 @@ if '2016' in options['era']:
   options['HLTFILTERSTOMEASURE']= {#"passHltEle27WPTightGsf" : cms.vstring("hltEle27WPTightGsfTrackIsoFilter"), 
                                    #"passHltPhoton175" : cms.vstring("hltEG175HEFilter"),
                                    #"passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
-                                   "passHBHENoiseFilter" : cms.vstring("Flag_HBHENoiseFilter"),
-                                   "passHBHENoiseFilterv2" : cms.vstring("HBHENoiseFilter"),
-                                   "passHBHENoiseFilterv3" : cms.vstring("hltHBHENoiseFilter"),
-                                   # "passHBHENoiseIsoFilter" : cms.vstring("Flag_HBHENoiseIsoFilter"),
-                                   # "passglobalSuperTightHalo2016Filter" : cms.vstring("Flag_globalSuperTightHalo2016Filter"),
-                                   # "passgoodVertices" : cms.vstring("Flag_goodVertices"),
-                                   # "passEcalDeadCellTriggerPrimitiveFilter" : cms.vstring("Flag_EcalDeadCellTriggerPrimitiveFilter"),
-                                   # "passBadPFMuonFilter" : cms.vstring("Flag_BadPFMuonFilter"),
-                                   # "passeeBadScFilter" : cms.vstring("Flag_eeBadScFilter"),
+                                   "passPFMET120IDTight" : cms.vstring("hltPFMET120Filter"),
+                                   "passPFMETNoMu120IDTight" : cms.vstring("hltPFMETNoMu120Filter"),
+                                   "passPFMET170HBHECleaned" : cms.vstring("hltPFMET170Filter"),
+                                   "passPFMET170HBHEBeamHaloCleaned" : cms.vstring("hltMETCleanBH80Filter"),
                                   } 
 
 elif '2017' in options['era']:
@@ -139,14 +134,6 @@ elif '2017' in options['era']:
                                    #"passHltEGL1SingleEG" : cms.vstring("hltEGL1SingleEGOrFilter"),
                                    #"passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
                                    #"passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
-                                   "passHBHENoiseFilter" : cms.vstring("Flag_HBHENoiseFilter"),
-                                   "passHBHENoiseIsoFilter" : cms.vstring("Flag_HBHENoiseIsoFilter"),
-                                   "passglobalSuperTightHalo2016Filter" : cms.vstring("Flag_globalSuperTightHalo2016Filter"),
-                                   "passgoodVertices" : cms.vstring("Flag_goodVertices"),
-                                   "passEcalDeadCellTriggerPrimitiveFilter" : cms.vstring("Flag_EcalDeadCellTriggerPrimitiveFilter"),
-                                   "passBadPFMuonFilter" : cms.vstring("Flag_BadPFMuonFilter"),
-                                   "passecalBadCalibFilterV2" : cms.vstring("Flag_ecalBadCalibFilterV2"),
-                                   "passeeBadScFilter" : cms.vstring("Flag_eeBadScFilter"),
                                   }
 
 elif '2018'  in options['era']:
@@ -156,14 +143,6 @@ elif '2018'  in options['era']:
   options['HLTFILTERSTOMEASURE']= {#"passHltEle32WPTightGsf" : cms.vstring("hltEle32WPTightGsfTrackIsoFilter"), 
                                    #"passHltPhoton200" : cms.vstring("hltEG200HEFilter"),
                                    #"passHltEle115CaloIdVTGsfTrkIdT" : cms.vstring("hltEle115CaloIdVTGsfTrkIdTGsfDphiFilter"),
-                                   "passHBHENoiseFilter" : cms.vstring("Flag_HBHENoiseFilter"),
-                                   "passHBHENoiseIsoFilter" : cms.vstring("Flag_HBHENoiseIsoFilter"),
-                                   "passglobalSuperTightHalo2016Filter" : cms.vstring("Flag_globalSuperTightHalo2016Filter"),
-                                   "passgoodVertices" : cms.vstring("Flag_goodVertices"),
-                                   "passEcalDeadCellTriggerPrimitiveFilter" : cms.vstring("Flag_EcalDeadCellTriggerPrimitiveFilter"),
-                                   "passBadPFMuonFilter" : cms.vstring("Flag_BadPFMuonFilter"),
-                                   "passecalBadCalibFilterV2" : cms.vstring("Flag_ecalBadCalibFilterV2"),
-                                   "passeeBadScFilter" : cms.vstring("Flag_eeBadScFilter"),
                                   }
 
 # Apply L1 matching (using L1Threshold) when flag contains "L1match" in name
